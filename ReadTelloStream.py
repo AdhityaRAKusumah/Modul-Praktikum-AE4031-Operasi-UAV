@@ -24,11 +24,11 @@ COPYRIGHT
 MODULE HISTORY(S)
     20/04/2025  - Created and debugged, AK
     24/11/2025  - Added function to save captured image, AK
+    07/12/2025  - Minor improvements, AK
 
 """
 
-import cv2, time
-import pandas as pd
+import cv2
 from djitellopy import Tello
 
 def ReadCamera(tello):
