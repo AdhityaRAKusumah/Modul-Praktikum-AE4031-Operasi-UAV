@@ -3,6 +3,7 @@ import time, traceback
 from djitellopy import Tello
 
 def FlightControl(command):
+    # Translates flight plan as drone commands
     movement, value = command.split()[0], command.split()[1]
 
     if movement.lower() == 'forward':
