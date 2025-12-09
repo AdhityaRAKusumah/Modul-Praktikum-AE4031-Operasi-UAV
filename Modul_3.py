@@ -1,5 +1,5 @@
 # Step 1: Import libraries
-import time, traceback, ReadTelloStream
+import time, traceback
 from djitellopy import Tello
 
 def FlightControl(command):
@@ -41,14 +41,8 @@ try:
     time.sleep(2)
 
     for cmd in FlightPlan:
-        img = ReadTelloStream.ReadCamera(drone)
         FlightControl(cmd)
         time.sleep(5)
-
-    img = ReadTelloStream.ReadCamera(drone)
-    time.sleep(2)
-
-    ReadTelloStream.SaveImage(img)
 
     drone.land()
     time.sleep(2)
